@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size:100px;
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+    background: #f5f5f5;
+    color: #717171;
+    overflow-x: hidden;
+}
+.wrapper{
+    font-size: .12rem;
+    width: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.container .top{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-bottom:1px solid #78b0ff;
+    background: #fff;
+}
+.container .top img{
+    width: 1rem;
+    height: .5rem;
+    vertical-align: middle;
+}
+.container .form {
+    width: 100%;
+    margin-top: .6rem;
+    padding-left: .4rem;
+}
+.container .form-item{
+    width: 5.3rem;
+    background: #fff;
+    padding: .1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: .2rem;
+    margin-top:.3rem;
+}
+.container .form-item p{
+    text-align: left;
+}
+.form .userInfo{
+    margin-top:.3rem;
+    font-size: .14rem;
+}
+.form .userInfo .form-item-content>div{
+    margin-top:.3rem;
+}
+.form .userInfo .form-item-content{
+    padding-bottom:.3rem;
+    padding-left:.2rem;
+}
+.form .userInfo .form-item-content input{
+    border:1px solid #ccc;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+}
+.form .form-item span{
+    color: #FC6666;
+}
+.form button{
+    display: block;
+    width: 1.5rem;
+    height: .75rem;
+    background: #78b0ff;
+    color: #fff;
+    border-radius: .1rem;
+    border: 0;
+    margin-top:.2rem;
+    float: right;
+    margin-right:.8rem;
+    margin-bottom:.4rem;
+    font-size:.2rem;
+}
+
+.researchInfo .form-item{
+    width: 5.2rem;
+    margin-top:.3rem;
+    font-size: .14rem;
+    padding-bottom:.3rem;
+    padding-left:.3rem;
+    line-height:.4rem;
+}
+.researchInfo .form-item-content>div{
+    margin-top:.3rem;
+}
+#link_other,#tech_other,#chanel_other{
+    border:1px solid #ccc;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+}
+.validity{
+    display: none;
+}
+#want{
+    width: 5rem;
+    border: 1px solid #ccc;
+}
+.form-item-content input[type=radio]{
+    vertical-align: middle;
+}
+.form-item-content input[type=checkbox]{
+    vertical-align: middle;
+}
