@@ -6,9 +6,10 @@ var runing = true;
 var num = 0;
 var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
-var xinm = new Array();
-var phone = new Array();
+
 function getPrizeDetail() {
+    var xinm = new Array();
+    var phone = new Array();
     $.ajax({
         type: 'GET',
         url: '/user/getDate',
@@ -34,7 +35,7 @@ function getPrizeDetail() {
                                 }
                                 console.log(xinm);
                                 console.log(phone);
-                                var pcount = xinm.length-1;//参加人数
+                                var pcount = xinm.length;//参加人数
                                 //开始停止
                                 function start() {
                                     if (runing) {
@@ -52,15 +53,17 @@ function getPrizeDetail() {
                                 }
                                 //循环参加名单
                                 function startNum() {
-                                    console.log(1);
                                     num = Math.floor(Math.random() * pcount);
+                                    console.log(num);
+                                    console.log(xinm[num]);
+                                    console.log(phone[num]);
                                     nametxt.html(xinm[num]);
                                     phonetxt.html(phone[num]);
                                     t = setTimeout(startNum, 0);
                                 }
                                 //停止跳动
                                 function stop() {
-                                    pcount = xinm.length-1;
+                                    pcount = xinm.length;
                                     clearInterval(t);
                                     t = 0;
                                 }

@@ -1,1 +1,1 @@
-[{"name":"李嵩1","school":"北京建筑大学","major":"给水排水工程","phone":"15011489806"}]
+[{"name":"lisong","school":"lisong","major":"lsiong","phone":"15011489807"},{"name":"lisong1","school":"lisong","major":"lsiong","phone":"15011489806"},{"name":"lisong2","school":"lisong","major":"lsiong","phone":"15011489809"},{"name":"lisong5","school":"lisong","major":"lsiong","phone":"15011489801"}]
