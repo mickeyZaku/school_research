@@ -22,6 +22,7 @@ function getPrizeDetail() {
                     success: function (_res) {
                         if (_res) {
                             if (_res.errno) {
+                                alert('暂无数据')
                                 return;
                             }else if(_res){
                                 var drawData = JSON.parse(_res)
