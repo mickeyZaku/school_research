@@ -18,11 +18,11 @@ router.get('/article',function (req,res) {
             fs.unlink(outPath,function () {
                 fs.exists(userInfoPath,function (isExist) {
                     if (!isExist) {
-                        res.send('noUserInfo')
+                        res.send('本场尚无信息可下载')
                     }else {
                         fs.exists(researchPath,function (_isExist) {
                             if (!_isExist) {
-                                res.send('noResearchInfo')
+                                res.send('本场尚无信息可下载')
                             } else {
                                 let archive = archiver('zip');
                                 let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
@@ -39,7 +39,27 @@ router.get('/article',function (req,res) {
                 })
             })
         }else{
-           res.send('本场尚无信息可下载')
+            fs.exists(userInfoPath,function (isExist) {
+                if (!isExist) {
+                    res.send('本场尚无信息可下载')
+                }else {
+                    fs.exists(researchPath,function (_isExist) {
+                        if (!_isExist) {
+                            res.send('本场尚无信息可下载')
+                        } else {
+                            let archive = archiver('zip');
+                            let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
+                            archive.pipe(output);
+                            archive.append(fs.createReadStream('../data/season1/userInfo.txt',{encoding: 'utf-8'}),{'name':'userInfo.txt'});
+                            archive.append(fs.createReadStream('../data/season1/research.txt',{encoding: 'utf-8'}),{'name':'research.txt'});
+                            archive.finalize();
+                            output.on('close', function() {
+                                res.download(path.resolve('../data/season1.zip'));
+                            });
+                        }
+                    })
+                }
+            })
         }
     })
 });
