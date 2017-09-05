@@ -152,7 +152,7 @@ $('#searchInfoSubmit').on('click', function (e) {//调研信息
         data: researchData,
         success: function (res) {
             if (res === 'success') {
-                window.location.href = 'http://127.0.0.1:8080/success';
+                window.location.href = 'http://dsp.xz.yiche.com//success';
             }else{
                 alert('提交失败，请稍后重试')
             }
