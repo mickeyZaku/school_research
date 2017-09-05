@@ -46,7 +46,7 @@ $('#userInfoSubmit').on('click', function (e) { //个人信息
             if (res === 'sameName') {
                 alert('您已经提交过信息')
             }else if(res === 'success'){
-                window.location.href = 'http://127.0.0.1:8080/search?name='+$('#userName').val()+'&season='+season
+                window.location.href = 'http://dsp.xz.yiche.com/search?name='+$('#userName').val()+'&season='+season
             }
         },
         error: function (error) {
