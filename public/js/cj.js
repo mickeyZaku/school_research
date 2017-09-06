@@ -9,6 +9,7 @@ var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
 
 function getPrizeDetail() {
+    $('#btntxt').off('click',start)
     var xinm = new Array();
     var phone = new Array();
     $.ajax({
