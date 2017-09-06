@@ -9,7 +9,6 @@ var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
 
 function getPrizeDetail() {
-    $('#btntxt').off('click',start)
     var xinm = new Array();
     var phone = new Array();
     $.ajax({
@@ -71,7 +70,7 @@ function getPrizeDetail() {
                                     clearInterval(t);
                                     t = 0;
                                 }
-                                $('#btntxt').on('click',start)
+                                $('#btntxt').off('click',start).on('click',start)
                             }
                         }else{
                             alert('暂无数据，请请稍后重试')
