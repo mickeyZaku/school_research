@@ -1,7 +1,6 @@
 
 var nametxt = $('.name');
 var phonetxt = $('.phone');
-var runing = true;
 var flag = true;
 // var td = 10;//内定中奖,从最小奖开始，共10个名额
 var num = 0;
@@ -9,6 +8,7 @@ var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
 
 function getPrizeDetail() {
+    var runing = true;
     var xinm = new Array();
     var phone = new Array();
     $.ajax({
@@ -39,6 +39,7 @@ function getPrizeDetail() {
                                 var pcount = xinm.length;//参加人数
                                 //开始停止
                                 function start() {
+                                    console.log(runing);
                                     if (runing) {
                                         runing = false;
                                         $('#btntxt').removeClass('start').addClass('stop');

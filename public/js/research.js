@@ -1,11 +1,12 @@
 ~(function (desW) {
-    var winW = document.documentElement.clientWidth;
+    var winW = document.documentElement.clientWidth || document.body.clientWidth;
     var ratio = winW/desW;
     document.documentElement.style.fontSize = ratio*100+"px";
 })(640);
 var season = /season=(\d+)/.exec(window.location.search)[1]
 console.log(season);
 $('#userInfoSubmit').on('click', function (e) { //个人信息
+    alert(1)
     if ($('#userName').val()==='') {
         $('.nameVal').css('display','inline');
         return;
