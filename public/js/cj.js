@@ -1,4 +1,7 @@
-
+if (window.localStorage.getItem('isTwice') === 'true') {
+    $('.qaCode').css('display','none')
+    $('.drawPrize').css('display','block')
+}
 var nametxt = $('.name');
 var phonetxt = $('.phone');
 var flag = true;
@@ -66,7 +69,6 @@ function getPrizeDetail() {
                                 }
                                 //停止跳动
                                 function stop() {
-                                    flag = true
                                     pcount = xinm.length;
                                     clearInterval(t);
                                     t = 0;
@@ -90,6 +92,7 @@ function getPrizeDetail() {
 }
 $('.loginQrCode .getDetailInfo li').map(function (index,item) {
     $(item).on('click',function () {
+        window.localStorage.setItem('isTwice',false)
         $('.drawPrize').css('display','none')
         $('.qaCode').css('display','block')
         $('.qaCode .qaCodePics li').map(function (_index,_item) {
@@ -101,15 +104,13 @@ $('.loginQrCode .getDetailInfo li').map(function (index,item) {
         })
     })
 })
+getPrizeDetail()
 function concatClick() {
-    $('.concat').off('click',concatClick)
-    if (flag) {
-        getPrizeDetail();
-        $('.qaCode').css('display','none')
-        $('.drawPrize').css('display','block')
-    }
+    window.localStorage.setItem('isTwice',true);
+    window.location.reload();
 }
-$('.concat').off('click',concatClick).on('click',concatClick)
+$('.concat a').on('click',concatClick)
+
 
 
 

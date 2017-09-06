@@ -163,6 +163,9 @@ html{
 
 .navbar .right_nav ul li.concat a{
     color: #78b0ff;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .qaCode{
     margin: 200px auto 0;
