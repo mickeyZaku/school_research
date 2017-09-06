@@ -1,4 +1,5 @@
 if (window.localStorage.getItem('isTwice') === 'true') {
+    getPrizeDetail()
     $('.qaCode').css('display','none')
     $('.drawPrize').css('display','block')
 }
@@ -105,7 +106,6 @@ $('.loginQrCode .getDetailInfo li').map(function (index,item) {
     })
 })
 function concatClick() {
-    getPrizeDetail()
     window.localStorage.setItem('isTwice',true);
     window.location.reload();
 }
