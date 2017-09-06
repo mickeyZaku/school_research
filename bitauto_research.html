@@ -79,7 +79,7 @@
     </div>
 </div>
 <script>
-    ~(function (desW) {
+    (function (desW) {
         alert(document.documentElement.clientWidth)
         var winW = document.documentElement.clientWidth || document.body.clientWidth;
         var ratio = winW/desW;
@@ -87,15 +87,16 @@
         alert(document.documentElement.style.fontSize)
     })(640);
     var season = /season=(\d+)/.exec(window.location.search)[1];
+    alert(season)
     $('#searchInfoSubmit').on('click', function (e) {//调研信息
         var name = /name=([^?&=]+)/.exec(window.location.search)[1]
         console.log(name);
-        let knowAuto;
-        let chanelKnow;
-        let atTech;
-        let atTechOther = '';
-        let focus;
-        let want;
+        var knowAuto;
+        var chanelKnow;
+        var atTech;
+        var atTechOther = '';
+        var focus;
+        var want;
         if ($('.knowAuto input[name="knowBitauto"]:checked').val()) {
             knowAuto = $('.knowAuto input[name="knowBitauto"]:checked').val()
             $('.knowChoose').css('display','none')
