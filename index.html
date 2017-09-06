@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/x-icon" href="http://www.bitauto.com/favicon.ico">
+    <!--<link rel="icon" type="image/x-icon" href="http://www.bitauto.com/favicon.ico">-->
+    <script>
+        ~(function (desW) {
+            alert(document.documentElement.clientWidth)
+            var winW = document.documentElement.clientWidth || document.body.clientWidth;
+            var ratio = winW/desW;
+            document.documentElement.style.fontSize = ratio*100+"px";
+            alert(document.documentElement.style.fontSize)
+        })(640);
+    </script>
 </head>
 <body>
 <div class="ads_content">
