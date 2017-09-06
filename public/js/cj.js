@@ -6,9 +6,9 @@ var flag = true;
 var num = 0;
 var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
-
+var runing = true;
 function getPrizeDetail() {
-    var runing = true;
+    runing = true
     var xinm = new Array();
     var phone = new Array();
     $.ajax({
