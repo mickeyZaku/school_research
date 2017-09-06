@@ -104,8 +104,8 @@ $('.loginQrCode .getDetailInfo li').map(function (index,item) {
         })
     })
 })
-getPrizeDetail()
 function concatClick() {
+    getPrizeDetail()
     window.localStorage.setItem('isTwice',true);
     window.location.reload();
 }
