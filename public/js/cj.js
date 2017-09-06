@@ -2,6 +2,7 @@
 var nametxt = $('.name');
 var phonetxt = $('.phone');
 var runing = true;
+var flag = true;
 // var td = 10;//内定中奖,从最小奖开始，共10个名额
 var num = 0;
 var t;
@@ -53,6 +54,7 @@ function getPrizeDetail() {
                                 }
                                 //循环参加名单
                                 function startNum() {
+                                    flag = false
                                     num = Math.floor(Math.random() * pcount);
                                     console.log(num);
                                     console.log(xinm[num]);
@@ -63,6 +65,7 @@ function getPrizeDetail() {
                                 }
                                 //停止跳动
                                 function stop() {
+                                    flag = true
                                     pcount = xinm.length;
                                     clearInterval(t);
                                     t = 0;
@@ -98,9 +101,11 @@ $('.loginQrCode .getDetailInfo li').map(function (index,item) {
     })
 })
 $('.concat').on('click',function () {
-    getPrizeDetail();
-    $('.qaCode').css('display','none')
-    $('.drawPrize').css('display','block')
+    if (flag) {
+        getPrizeDetail();
+        $('.qaCode').css('display','none')
+        $('.drawPrize').css('display','block')
+    }
 })
 
 
