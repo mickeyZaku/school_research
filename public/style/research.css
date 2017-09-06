@@ -42,7 +42,7 @@ html {
 }
 
 .container .form {
-    width: 100%;
+    /*width: 100%;*/
     margin-top: .6rem;
     padding-left: .4rem;
 }
