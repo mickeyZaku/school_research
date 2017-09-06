@@ -99,6 +99,7 @@ html {
     margin-right: .8rem;
     margin-bottom: .4rem;
     font-size: .2rem;
+    z-index: 100;
 }
 
 .researchInfo .form-item {
