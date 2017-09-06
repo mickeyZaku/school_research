@@ -1,7 +1,9 @@
 ~(function (desW) {
+    alert(document.documentElement.clientWidth)
     var winW = document.documentElement.clientWidth || document.body.clientWidth;
     var ratio = winW/desW;
     document.documentElement.style.fontSize = ratio*100+"px";
+    alert(document.documentElement.style.fontSize)
 })(640);
 var season = /season=(\d+)/.exec(window.location.search)[1]
 console.log(season);
