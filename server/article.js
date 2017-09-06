@@ -27,8 +27,8 @@ router.get('/article',function (req,res) {
                                 let archive = archiver('zip');
                                 let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
                                 archive.pipe(output);
-                                archive.append(fs.createReadStream('../data/season1/userInfo.txt',{encoding: 'utf-8'}),{'name':'userInfo.txt'});
-                                archive.append(fs.createReadStream('../data/season1/research.txt',{encoding: 'utf-8'}),{'name':'research.txt'});
+                                archive.append(fs.createReadStream(userInfoPath,{encoding: 'utf-8'}),{'name':'userInfo.txt'});
+                                archive.append(fs.createReadStream(researchPath,{encoding: 'utf-8'}),{'name':'research.txt'});
                                 archive.finalize();
                                 output.on('close', function() {
                                     res.download(path.resolve('../data/season1.zip'));
@@ -50,8 +50,8 @@ router.get('/article',function (req,res) {
                             let archive = archiver('zip');
                             let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
                             archive.pipe(output);
-                            archive.append(fs.createReadStream('../data/season1/userInfo.txt',{encoding: 'utf-8'}),{'name':'userInfo.txt'});
-                            archive.append(fs.createReadStream('../data/season1/research.txt',{encoding: 'utf-8'}),{'name':'research.txt'});
+                            archive.append(fs.createReadStream(userInfoPath,{encoding: 'utf-8'}),{'name':'userInfo.txt'});
+                            archive.append(fs.createReadStream(researchPath,{encoding: 'utf-8'}),{'name':'research.txt'});
                             archive.finalize();
                             output.on('close', function() {
                                 res.download(path.resolve('../data/season1.zip'));
