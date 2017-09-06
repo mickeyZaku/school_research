@@ -6,7 +6,6 @@
 var season = /season=(\d+)/.exec(window.location.search)[1]
 console.log(season);
 $('#userInfoSubmit').on('click', function (e) { //个人信息
-    alert(1)
     if ($('#userName').val()==='') {
         $('.nameVal').css('display','inline');
         return;
