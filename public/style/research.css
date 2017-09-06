@@ -78,10 +78,12 @@ html {
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    border-radius: 0;
 }
 
 .form .form-item span {
     color: #FC6666;
+    font-size: .12rem;
 }
 
 .form button {
