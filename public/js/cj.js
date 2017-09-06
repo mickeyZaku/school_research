@@ -8,7 +8,6 @@ var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
 var runing = true;
 function getPrizeDetail() {
-    runing = true
     var xinm = new Array();
     var phone = new Array();
     $.ajax({
@@ -27,6 +26,7 @@ function getPrizeDetail() {
                                 alert('暂无数据')
                                 return;
                             }else if(_res){
+                                $('#btntxt').off('click',start)
                                 var drawData = JSON.parse(_res)
                                 for (var key in drawData) {
                                     xinm.push(key);
@@ -71,7 +71,7 @@ function getPrizeDetail() {
                                     clearInterval(t);
                                     t = 0;
                                 }
-                                $('#btntxt').off('click',start).on('click',start)
+                                $('#btntxt').on('click',start)
                             }
                         }else{
                             alert('暂无数据，请请稍后重试')
@@ -101,13 +101,15 @@ $('.loginQrCode .getDetailInfo li').map(function (index,item) {
         })
     })
 })
-$('.concat').on('click',function () {
+function concatClick() {
+    $('.concat').off('click',concatClick)
     if (flag) {
         getPrizeDetail();
         $('.qaCode').css('display','none')
         $('.drawPrize').css('display','block')
     }
-})
+}
+$('.concat').off('click',concatClick).on('click',concatClick)
 
 
 
