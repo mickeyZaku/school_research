@@ -8,6 +8,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
+<script>
+    ~(function (desW) {
+        alert(document.documentElement.clientWidth)
+        var winW = document.documentElement.clientWidth || document.body.clientWidth;
+        var ratio = winW/desW;
+        document.documentElement.style.fontSize = ratio*100+"px";
+        alert(document.documentElement.style.fontSize)
+    })(640);
+</script>
 <div class="wrapper">
     <div class="container">
         <div class="top">
