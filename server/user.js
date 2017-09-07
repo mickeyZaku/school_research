@@ -7,7 +7,6 @@ let path = require('path');
 let router = express.Router();
 let fs = require('fs')
 let bodyParser = require('body-parser')
-let datePath = (new Date().getMonth()+1)+''+(new Date().getDate())
 
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -106,6 +105,7 @@ router.post('/submitResearchInfo',function (req,res) {
     console.log(req.query);
 })
 router.get('/getDate',function (req,res) {
+    let datePath = (new Date().getMonth()+1)+''+(new Date().getDate())
     res.send(datePath)
 })
 router.post('/getUserInfo',function (req,res,next) {
