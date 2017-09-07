@@ -10,6 +10,7 @@ var flag = true;
 var num = 0;
 var t;
 var datePath = (new Date().getMonth()+1)+''+(new Date().getDate());
+console.log(datePath);
 var runing = true;
 function getPrizeDetail() {
     var xinm = new Array();
@@ -20,6 +21,7 @@ function getPrizeDetail() {
         success: function (res) {
             if (res) {
                 datePath = res;
+                console.log(datePath);
                 $.ajax({
                     type: 'POST',
                     dateType: 'json',
