@@ -80,6 +80,7 @@ html {
     border-left: 0;
     border-right: 0;
     border-radius: 0;
+    font-size: .25rem;
 }
 
 .form .form-item span {
@@ -139,4 +140,15 @@ html {
 
 .form-item-content input[type=checkbox] {
     vertical-align: middle;
+}
+.form .form-success{
+    position: relative;
+    margin-top:3rem;
+}
+.form .form-success img{
+    position: absolute;
+    right: 0;
+}
+.form .form-success .success-info{
+    line-height:.5rem;
 }
