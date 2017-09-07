@@ -168,11 +168,14 @@ html{
     height: 100%;
 }
 .qaCode{
-    margin: 200px auto 0;
+    margin: 150px auto 0;
 }
 .qaCode .qaCodePics li{
     text-align: center;
     display: none;
+}
+.qaCode .qaCodePics li img{
+    width: 500px;
 }
 .qaCode .qaCodePics li span{
     font-size: 14px;
