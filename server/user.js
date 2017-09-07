@@ -12,6 +12,7 @@ let bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 router.post('/submitUserInfo', function(req, res, next){
+    let datePath = (new Date().getMonth()+1)+''+(new Date().getDate())
     let infoPath = '../data/userInfo'+datePath+'.txt';
     let infoSavePath = '../data/season'+req.query.season+'/userInfo.txt';
     console.log(infoSavePath)
