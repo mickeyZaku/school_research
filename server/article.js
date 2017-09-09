@@ -25,13 +25,13 @@ router.get('/article',function (req,res) {
                                 res.send('本场尚无信息可下载')
                             } else {
                                 let archive = archiver('zip');
-                                let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
+                                let output = fs.createWriteStream(path.resolve(outPath));
                                 archive.pipe(output);
                                 archive.append(fs.createReadStream(userInfoPath,{encoding: 'utf-8'}),{'name':'userInfo.txt'});
                                 archive.append(fs.createReadStream(researchPath,{encoding: 'utf-8'}),{'name':'research.txt'});
                                 archive.finalize();
                                 output.on('close', function() {
-                                    res.download(path.resolve('../data/season1.zip'));
+                                    res.download(path.resolve(outPath));
                                 });
                             }
                         })
@@ -48,13 +48,13 @@ router.get('/article',function (req,res) {
                             res.send('本场尚无信息可下载')
                         } else {
                             let archive = archiver('zip');
-                            let output = fs.createWriteStream(path.resolve('../data/season1.zip'));
+                            let output = fs.createWriteStream(path.resolve(outPath));
                             archive.pipe(output);
                             archive.append(fs.createReadStream(userInfoPath,{encoding: 'utf-8'}),{'name':'userInfo.txt'});
                             archive.append(fs.createReadStream(researchPath,{encoding: 'utf-8'}),{'name':'research.txt'});
                             archive.finalize();
                             output.on('close', function() {
-                                res.download(path.resolve('../data/season1.zip'));
+                                res.download(path.resolve(outPath));
                             });
                         }
                     })

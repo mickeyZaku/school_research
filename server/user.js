@@ -21,15 +21,20 @@ router.post('/submitUserInfo', function(req, res, next){
     fs.readFile(infoPath,'utf-8',function (err,data) {
         if (!data) {
             userInfo[req.body.name] = req.body.phone;
-            userInfos.push(req.body)
             console.log(userInfo);
             fs.writeFile(infoPath,JSON.stringify(userInfo),function (err) {
-                fs.writeFile(infoSavePath,JSON.stringify(userInfos), {encoding: 'utf8'},function (err) {
-                    if (err) {
-                        res.send(err)
-                    }else {
-                        res.send('success')
+                fs.readFile(infoSavePath,'utf-8',function (err,data) {
+                    if (data) {
+                        userInfos = JSON.parse(data);
                     }
+                    userInfos.push(req.body)
+                    fs.writeFile(infoSavePath,JSON.stringify(userInfos),{encoding: 'utf8'},function (err) {
+                        if (err) {
+                            res.send(err)
+                        }else {
+                            res.send('success')
+                        }
+                    })
                 })
             })
         }else{
