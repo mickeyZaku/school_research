@@ -72,6 +72,12 @@ function getPrizeDetail() {
                                 }
                                 //停止跳动
                                 function stop() {
+                                    if (xinm.length > 1) {
+                                        xinm.splice(num,1)
+                                        phone.splice(num,1)
+                                    }
+                                    console.log(xinm);
+                                    console.log(phone);
                                     pcount = xinm.length;
                                     clearInterval(t);
                                     t = 0;
