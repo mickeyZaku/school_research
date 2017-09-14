@@ -47,7 +47,7 @@ app.get('/success',function (req,res) {
     res.sendFile(path.resolve('../success.html'))
 })
 app.all('*',function (req,res) {
-    res.send(404);//可以使用send，自动处理编码格式和数据类型，还能自动将statusCode转为对应的status
+    res.sendStatus(404);//可以使用send，自动处理编码格式和数据类型，还能自动将statusCode转为对应的status
 });
 
 app.listen(8080,function () {
