@@ -13,64 +13,123 @@
     <div class="container">
         <div class="top">
             <span>欢迎您参加易车公司校园招聘小调查</span>
-            <img src="img/logo.jpg" alt=""><br>
+            <!--<img src="img/logo.jpg" alt=""><br>-->
         </div>
         <div class="form researchInfo">
+            <!--<div class="form-item">-->
+            <!--<p id="konwBitauto">1. 老实说，很久以前就知道易车还是今天刚刚知道的？<span>*</span></p>-->
+            <!--<div class="form-item-content knowAuto">-->
+            <!--<input type="radio" name="knowBitauto" value="早就知道了" id="know1"/> <label-->
+            <!--for="know1">早就知道了</label><br/>-->
+            <!--<input type="radio" name="knowBitauto" value="不好意思，今天才知道" id="know2"/> <label-->
+            <!--for="know2">不好意思，今天才知道......</label><br/>-->
+            <!--</div>-->
+            <!--<span class="validity knowChoose">请选择</span>-->
+            <!--</div>-->
             <div class="form-item">
-                <p id="konwBitauto">1. 老实说，很久以前就知道易车还是今天刚刚知道的？<span>*</span></p>
-                <div class="form-item-content knowAuto">
-                    <input type="radio" name="knowBitauto" value="早就知道了" id="know1"/> <label
-                        for="know1">早就知道了</label><br/>
-                    <input type="radio" name="knowBitauto" value="不好意思，今天才知道" id="know2"/> <label
-                        for="know2">不好意思，今天才知道......</label><br/>
-                </div>
-                <span class="validity knowChoose">请选择</span>
-            </div>
-            <div class="form-item">
-                <p id="chanel">2. 你是通过以下哪种渠道获得今天宣讲会的信息？<span>*</span></p>
+                <p id="chanel">1. 你是通过以下哪种渠道获得今天宣讲会的信息？<span>*</span></p>
                 <div class="form-item-content chanelKnow">
-                    <input type="radio" name="chanelToKnow" value="学校就业网/BBS" id="chanel1"/> <label for="chanel1">学校就业网／BBS</label><br>
-                    <input type="radio" name="chanelToKnow" value="微信公众号" id="chanel4"/> <label for="chanel4">微信公众号</label> <br/>
-                    <input type="radio" name="chanelToKnow" value="老师邮件、短信" id="chanel5"/> <label for="chanel5">老师邮件、短信</label><br/>
-                    <input type="radio" name="chanelToKnow" value="QQ群、微信群或口头通知" id="chanel6"/><label for="chanel6"> QQ群、微信群或口头通知</label> <br/>
-                    <input type="radio" name="chanelToKnow" value="海报、传单等" id="chanel7"/> <label for="chanel7">海报、传单等</label><br/>
-                    <input type="radio" name="chanelToKnow" value="其他" id="chanel8"/> <label for="chanel8">其他</label>
-                    <input type="text" id="chanel_other"><span>*</span><br/>
+                    <input type="radio" name="chanelToKnow" value="a" id="chanel1"/> <label for="chanel1">学校就业网／BBS</label><br>
+                    <input type="radio" name="chanelToKnow" value="b" id="chanel4"/> <label
+                        for="chanel4">微信公众号</label> <br/>
+                    <input type="radio" name="chanelToKnow" value="c" id="chanel5"/> <label
+                        for="chanel5">老师邮件、短信</label><br/>
+                    <input type="radio" name="chanelToKnow" value="d" id="chanel6"/><label for="chanel6">
+                    QQ群、微信群</label> <br/>
+                    <input type="radio" name="chanelToKnow" value="e" id="chanel7"/><label for="chanel6">
+                    电话通知</label> <br/>
+                    <input type="radio" name="chanelToKnow" value="f" id="chanel8"/> <label
+                        for="chanel8">海报、传单等</label><br/>
+                    <!--<input type="radio" name="chanelToKnow" value="其他" id="chanel8"/> <label for="chanel8">其他</label>-->
+                    <!--<input type="text" id="chanel_other"><span>*</span><br/>-->
                 </div>
-                <span class="validity chanelChoose">请选择</span><span class="validity chanelOtherChoose">请填写其他项</span>
+                <span class="validity chanelChoose">请选择</span>
+                <!--<span class="validity chanelOtherChoose">请填写其他项</span>-->
             </div>
             <div class="form-item">
-                <p id="tech">3. 求职过程中，你最看重哪项？（多选）<span>*</span></p>
-                <div class="form-item-content atTech">
-                    <input type="checkbox" name="attachTech" value="行业及公司发展前景" id="tech1"/> <label for="tech1">行业及公司发展前景</label><br>
-                    <input type="checkbox" name="attachTech" value="公司性质(国企、私企、外企等)" id="tech2"/><label for="tech2"> 公司性质(国企、私企、外企等)</label>
+                <p id="area">2. 你在未来工作发展中，在汽车相关的领域，更倾向哪个方向？<span>*</span></p>
+                <div class="form-item-content area">
+                    <input type="radio" name="toArea" value="a" id="area1"/> <label
+                        for="area1">汽车互联网（媒体）</label><br>
+                    <input type="radio" name="toArea" value="b" id="area2"/><label for="area2"> 汽车广告</label><br/>
+                    <input type="radio" name="toArea" value="c" id="area3"/> <label
+                        for="area3">汽车金融</label><br/>
+                    <input type="radio" name="toArea" value="d" id="area4"/> <label for="area4">汽车制造</label>
                     <br/>
-                    <input type="checkbox" name="attachTech" value="公司规模" id="tech3"/> <label for="tech3">公司规模</label><br/>
-                    <input type="checkbox" name="attachTech" value="公司提供的发展机会及培训体系" id="tech4"/> <label for="tech4">公司提供的发展机会及培训体系</label>
-                    <br/>
-                    <input type="checkbox" name="attachTech" value="解决户口" id="tech5"/> <label for="tech5">解决户口</label><br/>
-                    <input type="checkbox" name="attachTech" value="薪酬福利" id="tech6"/><label for="tech6"> 薪酬福利</label>
-                    <br/>
-                    <input type="checkbox" name="attachTech" value="办公地点" id="tech7"/> <label for="tech7">办公地点</label><br/>
-                    <input type="checkbox" name="attachTech" value="其他" id="tech8"/> <label for="tech8">其他</label>
-                    <input type="text" id="tech_other"><span>*</span><br/>
+                    <input type="radio" name="toArea" value="e" id="area5"/> <label for="area5">其他</label><br/>
                 </div>
-                <span class="validity techChoose">请选择</span><span class="validity techOtherChoose">请填写其他项</span><span class="validity focusOtherLess">最多选两项哦</span>
+                <span class="validity areaChoose">请选择</span>
             </div>
+            <!--<div class="form-item">-->
+            <!--<p id="tech">3. 求职过程中，你最看重哪项？（多选）<span>*</span></p>-->
+            <!--<div class="form-item-content atTech">-->
+            <!--<input type="checkbox" name="attachTech" value="行业及公司发展前景" id="tech1"/> <label for="tech1">行业及公司发展前景</label><br>-->
+            <!--<input type="checkbox" name="attachTech" value="公司性质(国企、私企、外企等)" id="tech2"/><label for="tech2"> 公司性质(国企、私企、外企等)</label>-->
+            <!--<br/>-->
+            <!--<input type="checkbox" name="attachTech" value="公司规模" id="tech3"/> <label for="tech3">公司规模</label><br/>-->
+            <!--<input type="checkbox" name="attachTech" value="公司提供的发展机会及培训体系" id="tech4"/> <label for="tech4">公司提供的发展机会及培训体系</label>-->
+            <!--<br/>-->
+            <!--<input type="checkbox" name="attachTech" value="解决户口" id="tech5"/> <label for="tech5">解决户口</label><br/>-->
+            <!--<input type="checkbox" name="attachTech" value="薪酬福利" id="tech6"/><label for="tech6"> 薪酬福利</label>-->
+            <!--<br/>-->
+            <!--<input type="checkbox" name="attachTech" value="办公地点" id="tech7"/> <label for="tech7">办公地点</label><br/>-->
+            <!--<input type="checkbox" name="attachTech" value="其他" id="tech8"/> <label for="tech8">其他</label>-->
+            <!--<input type="text" id="tech_other"><span>*</span><br/>-->
+            <!--</div>-->
+            <!--<span class="validity techChoose">请选择</span><span class="validity techOtherChoose">请填写其他项</span><span class="validity focusOtherLess">最多选两项哦</span>-->
+            <!--</div>-->
             <div class="form-item">
-                <p id="links">4. 你最关注宣讲会上哪个环节？<span>*</span></p>
+                <p id="links">3. 你最关注宣讲会上哪个环节？<span>*</span></p>
                 <div class="form-item-content focus">
-                    <input type="radio" name="focusLink" value="详细公司介绍" id="link1"/> <label for="link1">详细公司介绍</label><br>
-                    <input type="radio" name="focusLink" value="创始人或嘉宾背景及宣讲效果" id="link2"/><label for="link2"> 创始人或嘉宾背景及宣讲效果</label> <br/>
-                    <input type="radio" name="focusLink" value="Q&A环节" id="link3"/> <label for="link3">Q&A环节</label><br/>
-                    <input type="radio" name="focusLink" value="现场奖品" id="link4"/> <label for="link4">现场奖品</label> <br/>
-                    <input type="radio" name="focusLink" value="其他" id="link5"/> <label for="link5">其他</label>
-                    <input type="text" id="link_other"><span>*</span><br/>
+                    <input type="radio" name="focusLink" value="a" id="link1"/> <label
+                        for="link1">详细公司介绍</label><br>
+                    <input type="radio" name="focusLink" value="b" id="link2"/><label for="link2">
+                    创始人或嘉宾背景及宣讲效果</label> <br/>
+                    <input type="radio" name="focusLink" value="c" id="link3"/> <label
+                        for="link3">Q&A环节</label><br/>
+                    <input type="radio" name="focusLink" value="d" id="link4"/> <label for="link4">现场奖品</label> <br/>
+                    <input type="radio" name="focusLink" value="e" id="link5"/> <label
+                        for="link5">招聘职位介绍</label><br/>
                 </div>
-                <span class="validity focusChoose">请选择</span><span class="validity focusOtherChoose">请填写其他项</span>
+                <span class="validity linkChoose">请选择</span>
             </div>
             <div class="form-item">
-                <p id="feel">5. 聊聊你对本场宣讲会的建议和下一场的期待呗 ！<span>*</span></p>
+                <p id="company">4. 宣讲会之前，有听说了解过哪家公司？（多选）<span>*</span></p>
+                <div class="form-item-content company">
+                    <input type="checkbox" name="getCompany" value="a" id="company1"/> <label
+                        for="company1">易车</label><br>
+                    <input type="checkbox" name="getCompany" value="b" id="company2"/><label for="company2">
+                    新意互动</label> <br/>
+                    <input type="checkbox" name="getCompany" value="c" id="company3"/> <label
+                        for="company3">易鑫金融</label><br/>
+                    <input type="checkbox" name="getCompany" value="d" id="company4"/> <label
+                        for="company4">蔚来汽车</label> <br/>
+                </div>
+                <span class="validity companyChoose">请选择</span>
+            </div>
+            <div class="form-item">
+                <p id="tech">5. 求职过程中，你最看重哪两项？（多选）<span>*</span></p>
+                <div class="form-item-content atTech">
+                    <input type="checkbox" name="attachTech" value="a" id="tech1"/> <label
+                        for="tech1">行业及公司发展前景</label><br>
+                    <input type="checkbox" name="attachTech" value="b" id="tech2"/><label for="tech2">
+                    公司性质(国企、私企、外企等)</label>
+                    <br/>
+                    <input type="checkbox" name="attachTech" value="c" id="tech3"/> <label
+                        for="tech3">公司规模</label><br/>
+                    <input type="checkbox" name="attachTech" value="d" id="tech4"/> <label for="tech4">公司提供的发展机会及培训体系</label>
+                    <br/>
+                    <input type="checkbox" name="attachTech" value="e" id="tech5"/> <label
+                        for="tech5">解决户口</label><br/>
+                    <input type="checkbox" name="attachTech" value="f" id="tech6"/><label for="tech6"> 薪酬福利</label>
+                    <br/>
+                    <input type="checkbox" name="attachTech" value="g" id="tech7"/> <label
+                        for="tech7">办公地点</label><br/>
+                </div>
+                <span class="validity techChoose">请选择</span><span class="validity focusOtherLess">最多选两项哦</span>
+            </div>
+            <div class="form-item">
+                <p id="feel">6. 聊聊你对本场宣讲会的建议和下一场的期待呗 ！<span>*</span></p>
                 <textarea name="want" id="want"></textarea>
                 <span class="validity feelOther">请填写</span>
             </div>
@@ -82,111 +141,132 @@
     (function (desW) {
 //        alert(document.documentElement.clientWidth)
         var winW = document.documentElement.clientWidth || document.body.clientWidth;
-        var ratio = winW/desW;
-        document.documentElement.style.fontSize = ratio*100+"px";
+        var ratio = winW / desW;
+        document.documentElement.style.fontSize = ratio * 100 + "px";
 //        alert(document.documentElement.style.fontSize)
     })(640);
     var season = /season=(\d+)/.exec(window.location.search)[1];
     $('#searchInfoSubmit').on('click', function (e) {//调研信息
         var name = /name=([^?&=]+)/.exec(window.location.search)[1]
         console.log(name);
-        var knowAuto;
+//        var knowAuto;
         var chanelKnow;
+        var toArea;
+        var company;
         var atTech;
-        var atTechOther = '';
         var focus;
         var want;
-        if ($('.knowAuto input[name="knowBitauto"]:checked').val()) {
-            knowAuto = $('.knowAuto input[name="knowBitauto"]:checked').val()
-            $('.knowChoose').css('display','none')
-        } else {
-            $('.knowChoose').css('display','block')
-            return
-        }
-        if ($('.chanelKnow input[name="chanelToKnow"]:checked').val()) {
+//        if ($('.knowAuto input[name="knowBitauto"]:checked').val()) {
+//            knowAuto = $('.knowAuto input[name="knowBitauto"]:checked').val()
+//            $('.knowChoose').css('display', 'none')
+//        } else {
+//            $('.knowChoose').css('display', 'block')
+//            return
+//        }
+        if ($('.chanelKnow input[name="chanelToKnow"]:checked').val()) { // 校验1
             chanelKnow = $('.chanelKnow input[name="chanelToKnow"]:checked').val()
-            $('.chanelChoose').css('display','none')
-            if ($('.chanelKnow input[name="chanelToKnow"]:checked').val()==='其他') {
-                if (!$('#chanel_other').val()) {
-                    $('.chanelOtherChoose').css('display','block')
-                    return
-                }else{
-                    chanelKnow = $('#chanel_other').val()
-                    $('.chanelOtherChoose').css('display','none')
-                }
-            }
+            $('.chanelChoose').css('display', 'none')
+//            if ($('.chanelKnow input[name="chanelToKnow"]:checked').val() === '其他') {
+//                if (!$('#chanel_other').val()) {
+//                    $('.chanelOtherChoose').css('display', 'block')
+//                    return
+//                } else {
+//                    chanelKnow = $('#chanel_other').val()
+//                    $('.chanelOtherChoose').css('display', 'none')
+//                }
+//            }
         } else {
-            $('.chanelChoose').css('display','block')
+            $('.chanelChoose').css('display', 'block')
             return
         }
-        if ($('.atTech input[name="attachTech"]:checked').length>0) {
-            $('.techChoose').css('display','none');
-            if ($('.atTech input[name="attachTech"]:checked').length > 2) {
-                $('.focusOtherLess').css('display','block')
-                $('.techOtherChoose').css('display','none')
-                return;
-            }else {
-                atTech = $('.atTech input[name="attachTech"]:checked').serialize();
-                if ($('.atTech #tech8')[0].checked) {
-                    if (!$('#tech_other').val()) {
-                        $('.techOtherChoose').css('display','block')
-                        return
-                    }else{
-                        atTechOther = $('#tech_other').val()
-                        $('.techOtherChoose').css('display','none')
-                    }
-                }else{
-                    $('.techOtherChoose').css('display','none')
-                }
-            }
+
+        if ($('.area input[name="toArea"]:checked').val()) { // 校验2
+            toArea = $('.area input[name="toArea"]:checked').val()
+            $('.areaChoose').css('display', 'none')
         } else {
-            $('.techOtherChoose').css('display','none')
-            $('.techChoose').css('display','block')
+            $('.areaChoose').css('display', 'block')
             return
         }
-        if ($('.focus input[name="focusLink"]:checked').val()) {
+
+        if ($('.focus input[name="focusLink"]:checked').val()) { // 校验3
             focus = $('.focus input[name="focusLink"]:checked').val()
-            $('.focusChoose').css('display','none')
-            if ($('.focus input[name="focusLink"]:checked').val()==='其他') {
-                if (!$('#link_other').val()) {
-                    $('.focusOtherChoose').css('display','block')
-                    return
-                }else{
-                    focus = $('#link_other').val()
-                    $('.focusOtherChoose').css('display','none')
-                }
-            }
+            $('.linkChoose').css('display', 'none')
+//            if ($('.focus input[name="focusLink"]:checked').val() === '其他') {
+//                if (!$('#link_other').val()) {
+//                    $('.linkChoose').css('display', 'block')
+//                    return
+//                } else {
+//                    focus = $('#link_other').val()
+//                    $('.linkChoose').css('display', 'none')
+//                }
+//            }
         } else {
-            $('.focusChoose').css('display','block')
+            $('.linkChoose').css('display', 'block')
             return
         }
-        if ($('#want').val()) {
-            want = $('#want').val()
-            $('.feelOther').css('display','none')
+
+        if ($('.company input[name="getCompany"]:checked').length > 0) { // 校验4
+            $('.companyChoose').css('display', 'none');
+            company = $('.company input[name="getCompany"]:checked').serialize();
         } else {
-            $('.feelOther').css('display','block')
+            $('.companyChoose').css('display', 'block')
+            return
+        }
+
+        if ($('.atTech input[name="attachTech"]:checked').length > 0) { // 校验5
+            $('.techChoose').css('display', 'none');
+            atTech = $('.atTech input[name="attachTech"]:checked').serialize();
+            if ($('.atTech input[name="attachTech"]:checked').length > 2) {
+                $('.focusOtherLess').css('display', 'block')
+//                $('.techOtherChoose').css('display', 'none')
+                return;
+            } else {
+                atTech = $('.atTech input[name="attachTech"]:checked').serialize();
+//                if ($('.atTech #tech8')[0].checked) {
+//                    if (!$('#tech_other').val()) {
+//                        $('.techOtherChoose').css('display', 'block')
+//                        return
+//                    } else {
+//                        atTechOther = $('#tech_other').val()
+//                        $('.techOtherChoose').css('display', 'none')
+//                    }
+//                } else {
+//                    $('.techOtherChoose').css('display', 'none')
+//                }
+            }
+        } else {
+//            $('.techOtherChoose').css('display', 'none')
+            $('.techChoose').css('display', 'block')
+            return
+        }
+
+        if ($('#want').val()) { // 校验6
+            want = $('#want').val()
+            $('.feelOther').css('display', 'none')
+        } else {
+            $('.feelOther').css('display', 'block')
             return
         }
 
 
         var researchData = {
-            'knowAuto':knowAuto,
-            'chanelKnow':chanelKnow,
-            'atTech':decodeURI(atTech),
-            'atTechOther':atTechOther,
-            'focus':focus,
-            'want':want
+            'chanelKnow': chanelKnow,
+            'atTech': decodeURI(atTech),
+            'toArea':toArea,
+            'company':decodeURI(company),
+            'focus': focus,
+            'want': want
         }//个人信息
         console.log(researchData);
         $.ajax({
             type: 'POST',
             dateType: 'json',
-            url: '/user/submitResearchInfo?name='+name+'&season='+season,
+            url: '/user/submitResearchInfo?name=' + name + '&season=' + season,
             data: researchData,
             success: function (res) {
                 if (res === 'success') {
                     window.location.href = 'http://dsp.xz.yiche.com/success';
-                }else{
+                } else {
                     alert('提交失败，请稍后重试')
                 }
             },

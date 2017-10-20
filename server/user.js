@@ -69,21 +69,27 @@ router.post('/submitResearchInfo',function (req,res) {
     let userResearchData = {};
     let userResearchDatas = [];
     let atTech = ''
-    if (req.body.atTechOther === '') {
-        req.body.atTech.replace(/attachTech=([^&=]+)/g,function ($1) {
-            atTech += /attachTech=([^=]+)/.exec($1)[1]+';'
-        })
-    }else {
-        req.body.atTech.replace(/attachTech=([^&=]+)/g,function ($1) {
-            atTech += /attachTech=([^=]+)/.exec($1)[1]+';'
-        })
-        atTech= atTech.substring(0,atTech.length-1) + ":"+req.body.atTechOther;
-    }
-    userResearchData['老实说，很久以前就知道易车还是今天刚刚知道的?'] = req.body.knowAuto;
-    userResearchData['哪种渠道获得今天宣讲会的信息'] = req.body.chanelKnow;
-    userResearchData['求职过程中，你最看重哪项'] = atTech;
-    userResearchData['你最关注宣讲会上哪个环节'] = req.body.focus;
-    userResearchData['建议和期待'] = req.body.want;
+    req.body.atTech.replace(/attachTech=([^&=]+)/g,function ($1) {
+        atTech += /attachTech=([^=]+)/.exec($1)[1]+';'
+    });
+    let company = ''
+    req.body.company.replace(/getCompany=([^&=]+)/g,function ($1) {
+        company += /getCompany=([^=]+)/.exec($1)[1]+';'
+    });
+    // if (req.body.atTechOther === '') {
+    //
+    // }else {
+    //     req.body.atTech.replace(/attachTech=([^&=]+)/g,function ($1) {
+    //         atTech += /attachTech=([^=]+)/.exec($1)[1]+';'
+    //     })
+    //     atTech= atTech.substring(0,atTech.length-1) + ":"+req.body.atTechOther;
+    // }
+    userResearchData['1'] = req.body.chanelKnow;
+    userResearchData['2'] = req.body.toArea;
+    userResearchData['3'] = req.body.focus;
+    userResearchData['4'] = company;
+    userResearchData['5'] = atTech;
+    userResearchData['6'] = req.body.want;
     fs.readFile(infoSavePath,'utf-8',function (err,data) {
         if (data) {
             userResearchDatas = JSON.parse(data);
@@ -107,8 +113,6 @@ router.post('/submitResearchInfo',function (req,res) {
         }
 
     })
-    console.log(userResearchData);
-    console.log(req.query);
 })
 router.get('/getDate',function (req,res) {
     let datePath = (new Date().getMonth()+1)+''+(new Date().getDate())
